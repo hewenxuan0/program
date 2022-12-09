@@ -1,0 +1,17 @@
+int main()
+{
+    int a=getint();
+    putint(a);
+    int b;
+    int min;
+    void f(){
+	   
+    };
+    a = 1 + 2 + main();
+    b = 2 + 3 + f();
+    if (a < b)
+        min = a;
+    else
+        min = b;
+    return min;
+}
