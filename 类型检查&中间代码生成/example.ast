@@ -1,37 +1,35 @@
 program
+    FunctionDefine function name: @f, type: void()
+        CompoundStmt
+            InitStmt
+                Id	name: @b	scope: 2	type: i32
+                    IntegerLiteral	value: 1	type: i32
     FunctionDefine function name: @main, type: i32()
         CompoundStmt
             InitStmt
                 Id	name: @a	scope: 2	type: i32
                     FunctionExpr function name: @getint, type: i32()
+            DeclStmt
+                Id	name: @b	scope: 2	type: i32
             ExprStmt
                 FunctionExpr function name: @putint, type: void()
-                        Id	name: @a	scope: 2	type: i32
-            DeclStmt
-                Id	name: @b	scope: 2	type: i32
+                        Id	name: @b	scope: 2	type: i32
             DeclStmt
                 Id	name: @min	scope: 2	type: i32
-            FunctionDefine function name: @f, type: void()
-                CompoundStmt
-            ExprStmt
-            AssignStmt
-                Id	name: @a	scope: 2	type: i32
-                BinaryExpr	op: add
-                    BinaryExpr	op: add
-                        IntegerLiteral	value: 1	type: i32
-                        IntegerLiteral	value: 2	type: i32
-                    FunctionExpr function name: @main, type: i32()
             AssignStmt
                 Id	name: @b	scope: 2	type: i32
                 BinaryExpr	op: add
-                    BinaryExpr	op: add
-                        IntegerLiteral	value: 2	type: i32
-                        IntegerLiteral	value: 3	type: i32
-                    FunctionExpr function name: @f, type: void()
+                    IntegerLiteral	value: 3	type: i32
+                    IntegerLiteral	value: 1	type: i32
+            ExprStmt
+                FunctionExpr function name: @f, type: void()
             IfElseStmt
-                BinaryExpr	op: less
-                    Id	name: @a	scope: 2	type: i32
-                    Id	name: @b	scope: 2	type: i32
+                BinaryExpr	op: and
+                    SingelExpr	op: not
+                        Id	name: @a	scope: 2	type: i32
+                    BinaryExpr	op: less
+                        Id	name: @a	scope: 2	type: i32
+                        Id	name: @b	scope: 2	type: i32
                 AssignStmt
                     Id	name: @min	scope: 2	type: i32
                     Id	name: @a	scope: 2	type: i32
@@ -39,5 +37,4 @@ program
                     Id	name: @min	scope: 2	type: i32
                     Id	name: @b	scope: 2	type: i32
             ReturnStmt
-                Id	name: @min	scope: 2	type: i32
-type i32 and i32() mismatch in line xxtype i32 and void() mismatch in line xx
+                FunctionExpr function name: @f, type: void()
